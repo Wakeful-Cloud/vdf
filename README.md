@@ -1,4 +1,5 @@
 # VDF
+![Go Version 1.16](https://img.shields.io/badge/Go-1.16-007d9c?style=for-the-badge)
 ![Status Shield](https://img.shields.io/badge/status-release-brightgreen?style=for-the-badge)
 [![Test Status](https://img.shields.io/github/workflow/status/wakeful-cloud/vdf/Tests?label=Tests&style=for-the-badge&logo=github-actions)](https://github.com/wakeful-cloud/vdf/actions)
 

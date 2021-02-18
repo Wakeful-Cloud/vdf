@@ -1,7 +1,7 @@
 package vdf
 
 import (
-	"io/ioutil"
+	"os"
 	"reflect"
 	"testing"
 )
@@ -12,7 +12,7 @@ func TestReadVdf(t *testing.T) {
 	}
 
 	//Read
-	bytes, err := ioutil.ReadFile("./example/read-test.vdf")
+	bytes, err := os.ReadFile("./example/read-test.vdf")
 
 	if err != nil {
 		panic(err)
@@ -60,7 +60,7 @@ func Test_nextMap(t *testing.T) {
 	}
 
 	//Read
-	bytes, err := ioutil.ReadFile("./example/map-test.vdf")
+	bytes, err := os.ReadFile("./example/map-test.vdf")
 
 	if err != nil {
 		panic(err)
@@ -107,19 +107,19 @@ func Test_nextMapItem(t *testing.T) {
 	}
 
 	//Read
-	mapBytes, err := ioutil.ReadFile("./example/map-only-test.vdf")
+	mapBytes, err := os.ReadFile("./example/map-only-test.vdf")
 
 	if err != nil {
 		panic(err)
 	}
 
-	stringBytes, err := ioutil.ReadFile("./example/string-test.vdf")
+	stringBytes, err := os.ReadFile("./example/string-test.vdf")
 
 	if err != nil {
 		panic(err)
 	}
 
-	numberBytes, err := ioutil.ReadFile("./example/number-test.vdf")
+	numberBytes, err := os.ReadFile("./example/number-test.vdf")
 
 	if err != nil {
 		panic(err)

@@ -2,15 +2,15 @@ package main
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"log"
+	"os"
 
 	vdf "github.com/wakeful-cloud/vdf"
 )
 
 func main() {
 	//Read the file
-	bytes, err := ioutil.ReadFile("./map-test.vdf")
+	bytes, err := os.ReadFile("./map-test.vdf")
 
 	if err != nil {
 		panic(err)
@@ -41,5 +41,9 @@ func main() {
 	}
 
 	//Write the file
-	ioutil.WriteFile("./out.vdf", rawVdf, 0666)
+	err = os.WriteFile("./out.vdf", rawVdf, 0666)
+
+	if err != nil {
+		panic(err)
+	}
 }
